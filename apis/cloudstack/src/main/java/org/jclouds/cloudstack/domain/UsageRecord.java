@@ -340,7 +340,7 @@ public class UsageRecord {
          "zoneid", "virtualmachineid", "name", "offeringid", "templateid", "ipaddress", "issourcenat", "rawusage", "usage",
          "type", "usagetype"
    })
-   protected UsageRecord(String id, @Nullable String description, @Nullable String accountId, @Nullable String accountName,
+   protected UsageRecord(@Nullable String id, @Nullable String description, @Nullable String accountId, @Nullable String accountName,
                          @Nullable String domainId, @Nullable Date startDate, @Nullable Date endDate, @Nullable Date assignDate,
                          @Nullable String releaseDate, @Nullable String zoneId, @Nullable String virtualMachineId, @Nullable String virtualMachineName,
                          @Nullable String serviceOfferingId, @Nullable String templateId, @Nullable String ipAddress,
@@ -367,6 +367,7 @@ public class UsageRecord {
       this.usageType = usageType;
    }
 
+   @Nullable 
    public String getId() {
       return this.id;
    }
